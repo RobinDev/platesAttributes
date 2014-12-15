@@ -4,7 +4,7 @@
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/3d265e22-2c0c-4c50-8260-660ce24dedac/mini.png)](https://insight.sensiolabs.com/projects/3d265e22-2c0c-4c50-8260-660ce24dedac)
 [![Build Status](https://travis-ci.org/RobinDev/platesAttributes.svg)](https://travis-ci.org/RobinDev/platesAttributes)
 
-This package is an extension for the template engine [Plates https://github.com/thephpleague/plates].
+This package is an extension for the template engine [Plates](https://github.com/thephpleague/plates).
 
 Two features for the same goal **Manipulate html tag attributes via PHP array** :
 * `$this->attr(array $attributes)` transform an array in html tag attributes
