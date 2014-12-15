@@ -30,10 +30,18 @@ $templateEngine->loadExtension(new \rOpenDev\PlatesExtension\Attributes());
 $this->render('test', ['attributes' => ['class' => 'content']]);
 ```
 
-In your `test` template file
+In your `app/views/test.php` template file:
 ```php
+<?php
 $defaultAttributes = ['class' => 'main'];
 $attributes        = isset($attributes) ? $this->mergeAttr($defaultAttributes, $attributes) : $defaultAttributes;
+?>
+<div<?=$this->attr($attributes)?>>Hello World !</div>
+```
+
+Will render:
+```html
+<div class="main content">Hello World !</div>
 ```
 
 ## Installation
