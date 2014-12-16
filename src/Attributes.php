@@ -28,7 +28,7 @@ class Attributes implements ExtensionInterface
      *
      * @return array
      */
-    public function mergeAttributes()
+    public static function mergeAttributes()
     {
         $arrays = func_get_args();
         $result = [];
@@ -67,7 +67,7 @@ class Attributes implements ExtensionInterface
      * @param  array  $attributes
      * @return string
      */
-    public function mapAttributes(array $attributes)
+    public static function mapAttributes(array $attributes)
     {
         $result = '';
 
