@@ -51,10 +51,8 @@ class Attributes implements ExtensionInterface
             if (is_array($v)) {
                 $arr1[$key] = isset($arr1[$key]) ? self::mergeRecursive($arr1[$key], $v) : $v;
             }
-            if (isset($arr1[$key]) && $arr1[$key] != $v) {
-                $arr1[$key] .= ' '.$v;
-            } else {
-                $arr1[$key] = $v;
+            else {
+                $arr1[$key] = isset($arr1[$key]) ? $arr1[$key].($arr1[$key] != $v ? ' '.$v : '') : $v;
             }
         }
 
@@ -72,7 +70,7 @@ class Attributes implements ExtensionInterface
         $result = '';
 
         foreach ($attributes as $attribute => $value) {
-            $result .= " {$attribute}=\"{$value}\"";
+            $result .= is_int($attribute) ? ' '.$value : " {$attribute}=\"{$value}\"";
         }
 
         return $result;
