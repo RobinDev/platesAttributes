@@ -70,7 +70,8 @@ class Attributes implements ExtensionInterface
         $result = '';
 
         foreach ($attributes as $attribute => $value) {
-            $result .= is_int($attribute) ? ' '.$value : " {$attribute}=\"{$value}\"";
+            $e = strpos($value, ' ') !== false ? '"' : '';
+            $result .= ' '.(is_int($attribute) ? $value : $attribute.'='.$e.str_replace('"', '&quot;',$value).$e);
         }
 
         return $result;
