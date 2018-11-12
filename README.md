@@ -1,3 +1,5 @@
+This package is not maintened anymore (but still works) : Use https://github.com/PiedWeb/RenderHtmlAttribute
+
 # Plates Extension : Render html tag attributes
 
 [![Quality Score](https://img.shields.io/scrutinizer/g/RobinDev/platesAttributes.svg?style=flat-square)](https://scrutinizer-ci.com/g/RobinDev/platesAttributes)
